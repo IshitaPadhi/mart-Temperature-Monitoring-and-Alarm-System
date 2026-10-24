@@ -12,7 +12,7 @@
 A real-time temperature monitor built on the NXP LPC1768 (ARM Cortex-M3). An LM35 sensor is read through the on-chip 12-bit ADC and the temperature is shown on a 16×2 LCD. An 8-LED bar graph shows the temperature range at a glance, and the on-board buzzer beeps when the temperature rises above **40 °C**.
 
 <p align="center">
-  <img src="docs/setup.png" alt="Hardware setup: LPC1768 board with LCD, LED bar graph and the LM35 on a breadboard" width="760">
+  <img src="setup.png" alt="Hardware setup: LPC1768 board with LCD, LED bar graph and the LM35 on a breadboard" width="760">
 </p>
 <p align="center"><em>Figure 1. Hardware setup: the ALS-SDA-ARMCTXM3-01 board with the LCD and LED bar graph, and the LM35 on the breadboard (right).</em></p>
 
@@ -202,7 +202,7 @@ To test the alarm without a heat source, set `HIGH_T` to `340u` and warm the sen
 1. Create a new project in its own folder and choose **NXP, LPC1768**.
 2. Click **Yes** when asked to add the startup file.
 3. Copy `system_LPC17xx.c` from `C:\Keil\ARM\Startup\NXP\LPC17xx\` into the project folder and add it to the source group.
-4. Add `main.c` (the project code).
+4. Add `Solution.c` (the project code).
 5. Open **Project, Options for Target, Output** and tick **Create HEX File**.
 6. Build with **F7**. You need 0 errors.
 
@@ -286,10 +286,9 @@ Compare the LCD reading with a reference thermometer at room temperature, with f
 
 ```
 .
-├── main.c            # complete program (LCD, ADC, LED bar graph, buzzer logic)
+├── Solution.c        # complete program (LCD, ADC, LED bar graph, buzzer logic)
 ├── README.md         # this file
-└── docs/
-    └── setup.png     # photo of the hardware setup
+└── setup.png         # photo of the hardware setup
 ```
 
 ---
